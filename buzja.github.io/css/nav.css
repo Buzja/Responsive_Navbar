@@ -1,0 +1,186 @@
+body{
+    padding: 0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.website{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100vh;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    background: #00897B;
+    z-index: 999;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+.navbar_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar_content__item{
+    position: relative;
+    background: #00897B;
+}
+.navbar_content__item_link{
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    transition: .2s all ease-in-out;
+}
+.navbar_content__item_link:hover{
+    background: #01756a;
+}
+.navbar_content__item_trigger{
+    width: 0;
+height: 0;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 5px solid #26A69A;
+position: relative;
+top: 15px;
+right: -5px;
+content: '';
+}
+.navbar_content__item_dropdown{
+    position: absolute;
+    min-width: 200px;
+    background: #007D70;
+    display: none;
+}
+.navbar_content__item:hover>.navbar_content__item_dropdown{
+    display: block;
+}
+.navbar_content__item_dropdown li:hover{
+    background: #01756a;
+}
+.navbar_content__item_dropdown a{
+    display: block;
+    padding: 15px 20px;
+     color: #fff;
+}
+.mobile_navbar{
+    display: none;
+}
+@media only screen and (max-width: 900px){
+
+    .navbar{
+        display: block;
+        width: 200px;
+        top: 40px;
+        left: -250px;
+        height: 100%;
+        position: fixed;
+        background: #fff;
+        transition: left 0.25s ;
+        
+    }
+    .navbar_content{
+        display: block;
+    }
+    .navbar_content__item_dropdown{
+        position: relative;
+        width: 100%;
+    }
+    .mobile_navbar{
+        display: flex;
+justify-content: center;
+background: #00897B;
+box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+color: #fff;
+height: 40px;
+align-items: center;
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+z-index: 1000;
+-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+    }
+    .navbar_content__item_trigger{
+        position: absolute;
+top: 25px;
+right: 10px;
+    }
+    .burger::before,.burger::after{
+        content: " ";
+        display: block;
+        height: 2px;
+        background: #fff;
+        width: 100%;
+        position: absolute;
+        transition: .2s;
+    }
+    .burger::before{
+        transform: translateY(-5px);
+    }
+    .burger::after{
+        transform: translateY(5px);
+    }
+    .burger{
+        display: block;
+        position: relative;
+        width: 15px;
+        height: 2px;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .burger_btn{
+        display: block;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        left: 10px;
+    }
+    .sero_navbar.active .burger{
+        height: 0;
+    }
+    .sero_navbar.active .burger::after{
+        transform: rotate(-45deg);
+    }
+    .sero_navbar.active .burger::before{
+        transform: rotate(45deg);
+    }
+    .sero_navbar.active .navbar{
+        left: 0px;
+    }
+    .mask{
+        background: rgba(0,0,0,0.5);
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+    }
+}
