@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +8,61 @@
     <title>seroNAVBAR</title>
     <link rel="stylesheet" href="css/nav.css">
 </head>
+
 <body>
     <div class="website">
-    <div class="sero_navbar">
+        <div class="sero_navbar">
             <div class="navbar">
-                    <ul class="navbar_content">
-                        <li class="navbar_content__item">
-                             <a  class="navbar_content__item_link" href="#">home</a>
-                        </li>
-                        <li class="navbar_content__item">
-                            <a class="navbar_content__item_link" href="#">projects<span class="navbar_content__item_trigger"></span></a>
-                            <ul class="navbar_content__item_dropdown">
-                                <li><a href="#">design</a></li>
-                                <li><a href="#">websites</a></li>
-                                <li><a href="#">web applications</a></li>
-                            </ul>
-                        </li>
-                        <li class="navbar_content__item">
-                            <a  class="navbar_content__item_link" href="#">about us<span class="navbar_content__item_trigger"></span></a>
-                            <ul class="navbar_content__item_dropdown">
-                                <li><a href="#">contacts</a></li>
-                                <li><a href="#">location</a></li>
-                                <li><a href="#">our team</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <ul class="navbar_content">
+                    <li class="navbar_content__item">
+                        <a class="navbar_content__item_link" href="#">home</a>
+                    </li>
+                    <li class="navbar_content__item">
+                        <a class="navbar_content__item_link" href="#">projects
+                            <span class="navbar_content__item_trigger"></span>
+                        </a>
+                        <ul class="navbar_content__item_dropdown" isopen=false>
+                            <li>
+                                <a href="#">design</a>
+                            </li>
+                            <li>
+                                <a href="#">websites</a>
+                            </li>
+                            <li>
+                                <a href="#">web applications</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar_content__item">
+                        <a class="navbar_content__item_link" href="#">about us
+                            <span class="navbar_content__item_trigger"></span>
+                        </a>
+                        <ul class="navbar_content__item_dropdown" isopen=false>
+                            <li>
+                                <a href="#">contacts</a>
+                            </li>
+                            <li>
+                                <a href="#">location</a>
+                            </li>
+                            <li>
+                                <a href="#">our team</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile_navbar">
+                <a class="burger_btn">
+                    <span class="burger"></span>
+                </a>
+                <div class="mobile_title">
+                    seroNAVBAR
                 </div>
-                <div class="mobile_navbar">
-                    <a class="burger_btn">
-                        <span class="burger"></span>
-                    </a>
-                    <div class="mobile_title">
-                        seroNAVBAR
-                    </div>
-                </div>
+            </div>
+        </div>
+
     </div>
-   
-</div>
     <script src="js/index.js"></script>
 </body>
+
 </html>

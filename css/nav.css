@@ -134,7 +134,8 @@ a {
         background: #fff;
         -webkit-transition: left 0.25s;
         transition: left 0.25s;
-        overflow-y: scroll;
+        overflow-y: auto;
+overflow-x: hidden;
     }
     .navbar_content {
         display: block;
